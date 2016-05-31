@@ -1,0 +1,7 @@
+body{
+    background: url(../img/pinlayer2.png),url(../img/pinlayer1.png),url(../img/back.png);    
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}

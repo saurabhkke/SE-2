@@ -1,0 +1,349 @@
+(function(window,google,mapster){
+ 
+    var options = mapster.MAP_OPTIONS;
+    var elements = document.getElementById('sample');
+    var map = mapster.create(elements,options);
+    map.zoom(12);
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+    directionsDisplay.setMap(map.gMap);
+    directionsDisplay.setPanel(document.getElementById('right-panel'));
+
+    var PunePlaceId;
+    var MumbaiPlaceId;
+    var DelhiPlaceId;
+    var AllahabadPlaceId;
+    function load() {
+    PunePlaceId = PunePlaceI;
+    MumbaiPlaceId = MumbaiPlaceI;
+    DelhiPlaceId = DelhiPlaceI;
+    AllahabadPlaceId = AllahabadPlaceI;
+    }
+
+    load();
+
+
+
+var PunePlaceId = [
+	{
+	    PlaceId: "ChIJYeHvWF2_wjsRAKV4NnKIqx0",
+	    date: "10/05/2016 - 20/06/2016"
+	},
+    	{
+    	    PlaceId: "ChIJC14PsCeVwjsRLJTY1gzTcIE",
+	    date: "13/05/2016 - 28/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ6wPlUFPqwjsR7KDmCDtySys",
+	    date: "17/05/2016 - 25/06/2016"
+            
+    	},
+    	{
+    	    PlaceId: "ChIJoetUwGqVwjsRdsVWqeByfM8",
+	    date: "25/05/2016 - 8/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJexa2HuTpwjsRSkH0wAS_e7k",
+	    date: "19/05/2016 - 28/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJbdXdTHPAwjsR5LRA9dDeAes",
+	    date: "4/05/2016 - 25/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ78AUKoq_wjsRiKPGBs4TSIQ",
+	    date: "19/05/2016 - 30/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJBTtWq6O_wjsRin_RZQvzWco",
+	    date: "5/06/2016 - 12/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJBXLDpIC_wjsRCH5nbYn9a3E",
+	    date: "15/07/2016 - 30/07/2016"
+    	},
+    	{
+            PlaceId: "ChIJzyJZr1jCwjsRKTYAtb6RO94",
+	    date: "25/07/2016 - 12/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJq6qqmiXAwjsRZyMdypEcwX4",
+	    date: "19/06/2016 - 12/07/2016"
+	},
+    	{
+    	    PlaceId: "ChIJgYN5h2LAwjsRMbJn9Zbc5X4",
+	    date: "25/06/2016 - 15/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ94ZTUPXAwjsRU9GlWPnQtGQ",
+	    date: "19/07/2016 - 29/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJxwSgcoG_wjsRuF3MRoWthd4",
+	    date: "10/05/2016 - 12/06/2016"
+    	},
+	{
+    	    PlaceId: "ChIJVVVVlWm_wjsReCV2FJ452eo",
+	    date: "15/06/2016 - 25/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJI1xo77jDwjsRu7L-TddliuQ",
+	    date: "25/07/2016 - 15/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJW9ECeRfBwjsRoYuVtXtEFC0",
+	    date: "19/07/2016 - 06/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ3UZd11q5wjsRxruYuZEWNpc",
+	    date: "15/07/2016 - 05/08/2016"
+    	}
+	
+    ];
+
+    var MumbaiPlaceId = [
+	{
+    	    PlaceId: "ChIJSxArHOfR5zsROBligb6kMis",
+	    date: "10/06/2016 - 12/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJPR_ucefR5zsRQLnVjR-ycOU",
+	    date: "11/06/2016 - 14/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJpQy8nCDO5zsRgrNBo1-1X50",
+	    date: "12/06/2016 - 15/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJE3yj1CDO5zsRQWPSBX9QzbU",
+	    date: "15/06/2016 - 19/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJs0Uq1T7O5zsRV_QMEJJGjuE",
+	    date: "17/06/2016 - 20/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJq-LCafrO5zsRndYZErUBBFA",
+	    date: "19/06/2016 - 20/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJV3SeWBjP5zsRUdRFr5EVIIs",
+	    date: "20/06/2016 - 21/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJGWPN1tDO5zsR7WmIuRRMTZ8",
+	    date: "22/06/2016 - 23/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJN_3KUD3G5zsR3R2Fv9VLIa0",
+	    date: "21/06/2016 - 25/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ_f8be7jJ5zsRmUCGCe2EgOE",
+	    date: "22/06/2016 - 13/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJ0XqSRS3G5zsRvVbkghcw5J4",
+	    date: "25/06/2016 - 14/07/2016"
+    	}
+    ];
+    var DelhiPlaceId = [
+	{
+    	    PlaceId: "ChIJEeJR09_jDDkRF96FzunXIvU",
+	    date: "10/06/2016 - 12/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJuQBvcLDjDDkRxbpz-RXij4c",
+	    date: "12/06/2016 - 14/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJB5Cw0hEdDTkRPJ60aaUBNYU",
+	    date: "11/06/2016 - 09/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJMw5tmWkdDTkRhJsyb6mAIGA",
+	    date: "13/06/2016 - 15/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJY7HmVF78DDkRzOwH4A_iOlI",
+	    date: "14/06/2016 - 17/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJAQAAUJnkDDkRbw_vNrVyJF4",
+	    date: "15/06/2016 - 19/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ7dM9omP9DDkRAOHjjQo1vQY",
+	    date: "13/06/2016 - 19/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJt0LG1tXiDDkR-KOwK76Xo3M",
+	    date: "11/06/2016 - 07/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJlyjuDY4DDTkR-VEci-0_u4Q",
+	    date: "17/06/2016 - 16/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJAfWqamUBDTkRgAtC7YGo7-E",
+	    date: "18/06/2016 - 17/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJey67FxL7DDkRflVk4FjPMUs",
+	    date: "15/06/2016 - 14/07/2016"
+    	}
+    ];
+    var AllahabadPlaceId = [
+	{
+    	    PlaceId: "ChIJRRYaSbrKmjkRMKdN8I8xkiA",
+	    date: "10/05/2016 - 2/06/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJpbkmBqTKmjkRgG1OPO07Fj4",
+	    date: "18/06/2016 - 12/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJda-qBL_KmjkRTa9uJSPSKnA",
+	    date: "25/06/2016 - 05/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ_XJwppPKmjkR0VaCoy7L6Do",
+	    date: "26/06/2016 - 25/07/2016"
+    	},
+	{
+    	    PlaceId: "ChIJtSOIaL_KmjkRS8ydH2KjMY8",
+	    date: "21/06/2016 - 22/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJ3V9S4qLKmjkRtP2aAYt2Q9k",
+	    date: "17/07/2016 - 18/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJtbonqufKmjkRp3T5orH4sng",
+	    date: "09/06/2016 - 12/07/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJGwIbnL3KmjkRxtyLTpB5rWE",
+	    date: "17/07/2016 - 12/08/2016"
+    	},
+	{
+    	    PlaceId: "ChIJ55Bhmo9KhTkRzW2Ddie1g1w",
+	    date: "20/07/2016 - 21/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJY1R0S0ibDRQRWJjnkTbJdj4",
+	    date: "19/07/2016 - 18/08/2016"
+    	},
+    	{
+    	    PlaceId: "ChIJs94-GZTKmjkRB55NyF04xRY",
+	    date: "11/07/2016 - 15/08/2016"
+    	}
+    ];
+
+    
+    var i =0;
+    
+    var service = new google.maps.places.PlacesService(map.gMap);
+    
+    var onChangeHandler = function() {
+           myfun();
+    };
+    document.getElementById('city').addEventListener('change', onChangeHandler);
+   
+    
+    function myfun(){
+    	var cityname = document.getElementById('city').value;
+	var i = 1;
+    	if (cityname == 'Pune')
+    	{
+	   
+	    map.deleteMarkers();
+	    
+    	    PunePlaceId.forEach(function(placeid){
+    		mycityMarker(placeid.PlaceId,placeid.date,i);		
+		i += 1;
+    	    });
+	    map.zoom(11);
+	    
+    	}
+    	else if (cityname == "Mumbai")
+    	{
+	
+	    map.deleteMarkers();
+    	    MumbaiPlaceId.forEach(function(placeid){
+    		mycityMarker(placeid.PlaceId,placeid.date,i);
+		i += 1;
+    	    });
+		map.zoom(11);
+    	}
+    	else if (cityname == "Delhi")
+    	{
+	
+	    map.deleteMarkers();
+    	    DelhiPlaceId.forEach(function(placeid){
+    		mycityMarker(placeid.PlaceId,placeid.date,i);
+		i += 1;
+    	    });
+		map.zoom(11);
+    	}
+    	else if (cityname == "Allahabad")
+    	{
+	
+	    map.deleteMarkers();
+    	    AllahabadPlaceId.forEach(function(placeid){
+    		mycityMarker(placeid.PlaceId,placeid.date,i);
+		i += 1;
+    	    });
+		map.zoom(14);
+    	}
+	
+    }
+
+    function mycityMarker(placeid,date,i){
+	service.getDetails({
+	    placeId: placeid
+	}, function(place, status) {
+	    if (status === google.maps.places.PlacesServiceStatus.OK) {
+		
+		map.gMap.setCenter(place.geometry.location);
+		//var photos = place.photos;
+		var marker = map.addMarker({
+    			    position: place.geometry.location,
+    			    content: '<div><strong>' + place.name + '</strong><br>' + '<strong>Admission Start and End date</strong>'+'<br>' + "<strong>"+ date +"</strong>" + '<br>'+
+		 			  place.formatted_address + '</div>' 
+    			});
+		
+	    
+	   	 }
+	    document.getElementById("colleges").options[i]=new Option(place.name+" "+place.formatted_address,place.name+" "+place.formatted_address);
+	    
+	});
+	
+    }
+    var input = document.getElementById('start');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map.gMap);
+    var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+    document.getElementById('start').addEventListener('change', onChangeHandler);
+    document.getElementById('colleges').addEventListener('change', onChangeHandler);
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var start = document.getElementById('start').value;
+        var end = document.getElementById('colleges').value;
+        directionsService.route({
+          origin: start,
+          destination: end,
+          travelMode: google.maps.TravelMode.DRIVING
+        }, function(response, status) {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+
+
+}(window,google,window.Mapster || (window.Mapster = {})));
